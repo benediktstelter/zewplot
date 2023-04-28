@@ -1,0 +1,17 @@
+Package: zewplot
+Type: Package
+Title: Create plots using zew plottheme 
+Version: 0.1.0
+Authors@R: 
+    person("Benedikt", "Stelter", email = "Benedikt.Stelter@zew.de", role=c("aut", "cre"))
+Description: The package implements zew_plotstyle, a 'ggplot2' theme 
+    which can be used to create plots with uniform style. In a later
+    version, this package might also include automatic coloring along 
+    ZEW's style guidelines.
+Imports:
+    ggplot2,
+    dplyr
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
