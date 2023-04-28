@@ -9,28 +9,27 @@
 #' geom_hline(yintercept = 0, size = 1, colour="#333333") +
 #' zew_plotstyle()
 
-zew_plotstyle <- function() {
-  font <- "Calibri"
+zew_plotstyle <- function(font = "", font_size = "12") {
 
   ggplot2::theme(
     text=element_text(family = font),
-    plot.title = element_text(face = "bold", size = 12, colour = "black"),
+    plot.title = element_text(face = "bold", size = fontsize, colour = "black"),
     legend.background = element_rect(fill = "white", size = 4, colour = "white"),
     legend.position = "bottom",
-    legend.title = element_text(family = font, colour = "black", size = 12),
-    legend.text = element_text(family = font, colour = "black", size = 12),
+    legend.title = element_text(family = font, colour = "black", size = fontsize),
+    legend.text = element_text(family = font, colour = "black", size = fontsize),
     legend.key = element_rect(fill = "white"),
-    axis.title.y = element_text(family = font, colour = "black", size = 12),
+    axis.title.y = element_text(family = font, colour = "black", size = fontsize),
     axis.ticks.y = element_blank(),
     axis.ticks.x = element_line(colour = "black", size = 0.5),
-    axis.text = element_text(family = font, colour = "black", size= 12),
+    axis.text = element_text(family = font, colour = "black", size= fontsize),
     axis.line.x = element_line(colour = "black", size = 0.5),
     panel.grid.major.y = element_line(colour = "grey70", size = 0.2, linetype = 3),
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
-    plot.subtitle = ggplot2::element_text(size = 12, colour = "black", margin=ggplot2::margin(3,0,9,0)),
+    plot.subtitle = ggplot2::element_text(size = fontsize, colour = "black", margin=ggplot2::margin(3,0,9,0)),
     panel.background = element_rect(fill = "white"),
-    axis.title.x = element_text(family = font, colour = "black", size = 12),
+    axis.title.x = element_text(family = font, colour = "black", size = fontsize),
     plot.title.position = "plot"
   )
 }
