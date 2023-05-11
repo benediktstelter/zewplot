@@ -11,7 +11,7 @@ The package `zewplot` implements the function `zew_plotstyle()`
 ## Installation
 
 It is necessary to install the `devtools` package. Then, `zewplot` can
-be installed from GitHub:
+be installed from the GitHub repository:
 
 ``` r
 install.packages('devtools')

@@ -23,7 +23,7 @@ The package `zewplot` implements the function `zew_plotstyle()`
 ## Installation
 
 It is necessary to install the `devtools` package.
-Then, `zewplot` can be installed from GitHub:
+Then, `zewplot` can be installed from the GitHub repository:
 
 ``` r
 install.packages('devtools')
@@ -75,6 +75,7 @@ example_plot2
 ```
 
 As a third argument, it is possible to flip the design of the x-axis and y-axis using `flipped = TRUE` (default setting is `flipped = FALSE`), which might be useful in certain applications (not in this example though):
+
 
 ```{r example3, echo=TRUE, warning=FALSE, message=FALSE}
 #Plotting using zew_plotstyle with custom font and custom font size as well as flipped axis design
