@@ -49,7 +49,22 @@ showtext_auto()
 example_plot2 <- ggplot(df, aes(x = date, y = value)) + 
   geom_line(aes(color = variable), size = 1) +
   scale_color_manual(values = c("#b4be28", "#527ca4")) +
-  zew_plotstyle(font = "Latin Modern Roman 10", font_size=8)
+  zew_plotstyle(font = "Latin Modern Roman 10", font_size = 8)
 ```
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+
+As a third argument, it is possible to flip the design of the x-axis and
+y-axis using `flipped = TRUE` (default setting is `flipped = FALSE`),
+which might be useful in certain applications (not in this example
+though):
+
+``` r
+#Plotting using zew_plotstyle with custom font and custom font size as well as flipped axis design
+example_plot3 <- ggplot(df, aes(x = date, y = value)) + 
+  geom_line(aes(color = variable), size = 1) +
+  scale_color_manual(values = c("#b4be28", "#527ca4")) +
+  zew_plotstyle(font = "Latin Modern Roman 10", font_size = 8, flipped = TRUE)
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
