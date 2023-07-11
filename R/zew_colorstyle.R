@@ -8,7 +8,7 @@ zew_colors <- c(
   `red`        = "#9c2424",
   `dark blue`  = "#527ca4",
   `brown`      = "#958c47",
-  `yellow`     = "#c7a92f",
+  `yellow`     = "#c7a92f"
 )
 
 #' Function to extract ZEW colors as hex codes
