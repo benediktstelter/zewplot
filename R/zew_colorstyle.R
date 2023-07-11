@@ -1,6 +1,3 @@
-# Source: https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2
-
-
 # ZEW colors
 zew_colors <- c(
   `green`      = "#d1d701",
@@ -12,9 +9,7 @@ zew_colors <- c(
 )
 
 #' Function to extract ZEW colors as hex codes
-#'
 #' @param ... Character names of zew_colors
-#' @noRd
 #'
 zew_cols <- function(...) {
   cols <- c(...)
@@ -40,11 +35,9 @@ zew_palettes <- list(
 
 
 #' Return function to interpolate a zew color palette
-#'
 #' @param palette Character name of palette in zew_palettes
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette()
-#' @noRd
 #'
 zew_pal <- function(palette = "main", reverse = FALSE, ...) {
   pal <- zew_palettes[[palette]]
@@ -55,13 +48,12 @@ zew_pal <- function(palette = "main", reverse = FALSE, ...) {
 }
 
 #' Color scale constructor for zew colors
-#'
+#' @export
 #' @param palette Character name of palette in zew_palettes
 #' @param discrete Boolean indicating whether color aesthetic is discrete or not
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments passed to discrete_scale() or
 #'            scale_color_gradient(), used respectively when discrete is TRUE or FALSE
-#' @export
 #'
 scale_color_zew <- function(palette = "two", discrete = TRUE, reverse = FALSE, ...) {
   pal <- zew_pal(palette = palette, reverse = reverse)
@@ -74,15 +66,14 @@ scale_color_zew <- function(palette = "two", discrete = TRUE, reverse = FALSE, .
 }
 
 #' Fill scale constructor for zew colors
-#'
 #' @description This function implements zew colorstyle, which creates a fancy and uniform look.
 #' @keywords zew_colorstyle
+#' @export
 #' @param palette Character name of palette in zew_palettes
 #' @param discrete Boolean indicating whether color aesthetic is discrete or not
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments passed to discrete_scale() or
 #'            scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
-#' @export
 #'
 scale_fill_zew <- function(palette = "two", discrete = TRUE, reverse = FALSE, ...) {
   pal <- zew_pal(palette = palette, reverse = reverse)
