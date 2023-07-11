@@ -7,17 +7,12 @@
 #' line <- ggplot(line_df, aes(x = year, y = lifeExp)) +
 #' geom_line(colour = "#007f7f", size = 1) +
 #' geom_hline(yintercept = 0, size = 1, colour="#333333") +
-#' zew_plotstyle()
-
-
-
-#' Custom ggplot theme in ZEW style
-#'
+#' theme_zew
 #' @param font Select custom font, has to be loaded first using other functions
 #' @param font_size Select font size, default is 12
 #' @param flipped Boolean indicating whether the axes should be flipped (see documentation)
 #'
-zew_plotstyle <- function(font = "", font_size = "12", flipped = FALSE) {
+theme_zew <- function(font = "", font_size = "12", flipped = FALSE) {
 
   if (flipped == FALSE) {
   ggplot2::theme(
@@ -64,6 +59,3 @@ zew_plotstyle <- function(font = "", font_size = "12", flipped = FALSE) {
     plot.title.position = "plot"
   )}
 }
-
-
-zew_colorstyle <- function() {}
