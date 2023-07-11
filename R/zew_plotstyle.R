@@ -1,5 +1,4 @@
 #' Use zew style for plots
-#'
 #' @description This function implements zew plottheme, which creates a fancy and uniform look.
 #' @keywords zew_plotstyle
 #' @export
